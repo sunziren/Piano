@@ -6,135 +6,134 @@
         <link rel="icon" href="./image/favicon.ico">
         <style type="text/css">
             .keyboard{
-                height:100%;
-                width: 100%;
-                background:red;
+                position:fixed;
+                bottom:0;
+                height:18%;
+                width:(1920/52)px;
+                background-color: red;
             }
             .white-key{
                 background-color: #ffffff;
                 float:left;
-                height:80px;
-                width: 10px;
+                height:100%;
                 border:1px solid black;
             }
             .black-key{
                 background-color: #000000;
                 float:left;
-                height:80px;
-                width: 10px;
+                height:100%;
+                width: 0px;
                 border:1px solid black;
             }
         </style>
         <link rel="stylesheet" href="./assets/js/layui/css/layui.css"  media="all">
     </head>
-    <body class="layui-layout-body">
-        <div class="layui-layout layui-layout-admin">
-            <div class="layui-edge-bottom">
-                <div class="layui-row" style="margin-bottom: 0px">
-                    <div id="key_1"  class="white-key"></div>
-                    <div id="key_2"  class="black-key"></div>
-                    <div id="key_3"  class="white-key"></div>
-                    <div id="key_4"  class="white-key"></div>
-                    <div id="key_5"  class="black-key"></div>
-                    <div id="key_6"  class="white-key"></div>
-                    <div id="key_7"  class="black-key"></div>
-                    <div id="key_8"  class="white-key"></div>
-                    <div id="key_9"  class="white-key"></div>
-                    <div id="key_10" class="black-key"></div>
-                    <div id="key_11" class="white-key"></div>
-                    <div id="key_12" class="black-key"></div>
-                    <div id="key_13" class="white-key"></div>
-                    <div id="key_14" class="black-key"></div>
-                    <div id="key_15" class="white-key"></div>
-                    <div id="key_16" class="white-key"></div>
-                    <div id="key_17" class="black-key"></div>
-                    <div id="key_18" class="white-key"></div>
-                    <div id="key_19" class="black-key"></div>
-                    <div id="key_20" class="white-key"></div>
-                    <div id="key_21" class="white-key"></div>
-                    <div id="key_22" class="black-key"></div>
-                    <div id="key_23" class="white-key"></div>
-                    <div id="key_24" class="black-key"></div>
-                    <div id="key_25" class="white-key"></div>
-                    <div id="key_26" class="black-key"></div>
-                    <div id="key_27" class="white-key"></div>
-                    <div id="key_28" class="white-key"></div>
-                    <div id="key_29" class="black-key"></div>
-                    <div id="key_30" class="white-key"></div>
-                    <div id="key_31" class="black-key"></div>
-                    <div id="key_32" class="white-key"></div>
-                    <div id="key_33" class="white-key"></div>
-                    <div id="key_34" class="black-key"></div>
-                    <div id="key_35" class="white-key"></div>
-                    <div id="key_36" class="black-key"></div>
-                    <div id="key_37" class="white-key"></div>
-                    <div id="key_38" class="black-key"></div>
-                    <div id="key_39" class="white-key"></div>
-                    <div id="key_40" class="white-key"></div>
-                    <div id="key_41" class="black-key"></div>
-                    <div id="key_42" class="white-key"></div>
-                    <div id="key_43" class="black-key"></div>
-                    <div id="key_44" class="white-key"></div>
-                    <div id="key_45" class="white-key"></div>
-                    <div id="key_46" class="black-key"></div>
-                    <div id="key_47" class="white-key"></div>
-                    <div id="key_48" class="black-key"></div>
-                    <div id="key_49" class="white-key"></div>
-                    <div id="key_50" class="black-key"></div>
-                    <div id="key_51" class="white-key"></div>
-                    <div id="key_52" class="white-key"></div>
-                    <div id="key_53" class="black-key"></div>
-                    <div id="key_54" class="white-key"></div>
-                    <div id="key_55" class="black-key"></div>
-                    <div id="key_56" class="white-key"></div>
-                    <div id="key_57" class="white-key"></div>
-                    <div id="key_58" class="black-key"></div>
-                    <div id="key_59" class="white-key"></div>
-                    <div id="key_60" class="black-key"></div>
-                    <div id="key_61" class="white-key"></div>
-                    <div id="key_62" class="black-key"></div>
-                    <div id="key_63" class="white-key"></div>
-                    <div id="key_64" class="white-key"></div>
-                    <div id="key_65" class="black-key"></div>
-                    <div id="key_66" class="white-key"></div>
-                    <div id="key_67" class="black-key"></div>
-                    <div id="key_68" class="white-key"></div>
-                    <div id="key_69" class="white-key"></div>
-                    <div id="key_70" class="black-key"></div>
-                    <div id="key_71" class="white-key"></div>
-                    <div id="key_72" class="black-key"></div>
-                    <div id="key_73" class="white-key"></div>
-                    <div id="key_74" class="black-key"></div>
-                    <div id="key_75" class="white-key"></div>
-                    <div id="key_76" class="white-key"></div>
-                    <div id="key_77" class="black-key"></div>
-                    <div id="key_78" class="white-key"></div>
-                    <div id="key_79" class="black-key"></div>
-                    <div id="key_80" class="white-key"></div>
-                    <div id="key_81" class="white-key"></div>
-                    <div id="key_82" class="black-key"></div>
-                    <div id="key_83" class="white-key"></div>
-                    <div id="key_84" class="black-key"></div>
-                    <div id="key_85" class="white-key"></div>
-                    <div id="key_86" class="black-key"></div>
-                    <div id="key_87" class="white-key"></div>
-                    <div id="key_88" class="white-key"></div>
-                </div>
-            </div>
+    <body>
+        <div class="keyboard">
+            <div id="key_1"  class="white-key"></div>
+            <div id="key_2"  class="black-key"></div>
+            <div id="key_3"  class="white-key"></div>
+            <div id="key_4"  class="white-key"></div>
+            <div id="key_5"  class="black-key"></div>
+            <div id="key_6"  class="white-key"></div>
+            <div id="key_7"  class="black-key"></div>
+            <div id="key_8"  class="white-key"></div>
+            <div id="key_9"  class="white-key"></div>
+            <div id="key_10" class="black-key"></div>
+            <div id="key_11" class="white-key"></div>
+            <div id="key_12" class="black-key"></div>
+            <div id="key_13" class="white-key"></div>
+            <div id="key_14" class="black-key"></div>
+            <div id="key_15" class="white-key"></div>
+            <div id="key_16" class="white-key"></div>
+            <div id="key_17" class="black-key"></div>
+            <div id="key_18" class="white-key"></div>
+            <div id="key_19" class="black-key"></div>
+            <div id="key_20" class="white-key"></div>
+            <div id="key_21" class="white-key"></div>
+            <div id="key_22" class="black-key"></div>
+            <div id="key_23" class="white-key"></div>
+            <div id="key_24" class="black-key"></div>
+            <div id="key_25" class="white-key"></div>
+            <div id="key_26" class="black-key"></div>
+            <div id="key_27" class="white-key"></div>
+            <div id="key_28" class="white-key"></div>
+            <div id="key_29" class="black-key"></div>
+            <div id="key_30" class="white-key"></div>
+            <div id="key_31" class="black-key"></div>
+            <div id="key_32" class="white-key"></div>
+            <div id="key_33" class="white-key"></div>
+            <div id="key_34" class="black-key"></div>
+            <div id="key_35" class="white-key"></div>
+            <div id="key_36" class="black-key"></div>
+            <div id="key_37" class="white-key"></div>
+            <div id="key_38" class="black-key"></div>
+            <div id="key_39" class="white-key"></div>
+            <div id="key_40" class="white-key"></div>
+            <div id="key_41" class="black-key"></div>
+            <div id="key_42" class="white-key"></div>
+            <div id="key_43" class="black-key"></div>
+            <div id="key_44" class="white-key"></div>
+            <div id="key_45" class="white-key"></div>
+            <div id="key_46" class="black-key"></div>
+            <div id="key_47" class="white-key"></div>
+            <div id="key_48" class="black-key"></div>
+            <div id="key_49" class="white-key"></div>
+            <div id="key_50" class="black-key"></div>
+            <div id="key_51" class="white-key"></div>
+            <div id="key_52" class="white-key"></div>
+            <div id="key_53" class="black-key"></div>
+            <div id="key_54" class="white-key"></div>
+            <div id="key_55" class="black-key"></div>
+            <div id="key_56" class="white-key"></div>
+            <div id="key_57" class="white-key"></div>
+            <div id="key_58" class="black-key"></div>
+            <div id="key_59" class="white-key"></div>
+            <div id="key_60" class="black-key"></div>
+            <div id="key_61" class="white-key"></div>
+            <div id="key_62" class="black-key"></div>
+            <div id="key_63" class="white-key"></div>
+            <div id="key_64" class="white-key"></div>
+            <div id="key_65" class="black-key"></div>
+            <div id="key_66" class="white-key"></div>
+            <div id="key_67" class="black-key"></div>
+            <div id="key_68" class="white-key"></div>
+            <div id="key_69" class="white-key"></div>
+            <div id="key_70" class="black-key"></div>
+            <div id="key_71" class="white-key"></div>
+            <div id="key_72" class="black-key"></div>
+            <div id="key_73" class="white-key"></div>
+            <div id="key_74" class="black-key"></div>
+            <div id="key_75" class="white-key"></div>
+            <div id="key_76" class="white-key"></div>
+            <div id="key_77" class="black-key"></div>
+            <div id="key_78" class="white-key"></div>
+            <div id="key_79" class="black-key"></div>
+            <div id="key_80" class="white-key"></div>
+            <div id="key_81" class="white-key"></div>
+            <div id="key_82" class="black-key"></div>
+            <div id="key_83" class="white-key"></div>
+            <div id="key_84" class="black-key"></div>
+            <div id="key_85" class="white-key"></div>
+            <div id="key_86" class="black-key"></div>
+            <div id="key_87" class="white-key"></div>
+            <div id="key_88" class="white-key"></div>
         </div>
     </body>
     <script src="./assets/js/jquery/jquery-3.5.1.min.js"></script>
     <script src="./assets/js/layui/layui.js" charset="utf-8"></script>
     <script>
+        var windowWidth = 0;
         //用来存放每个键位对应的琴键的颜色0-87个键，0代表白色，1代表黑色
         var keyArray = new Array("0","1","0","0","1","0","1","0","0","1","0","1","0","1","0","0","1","0","1","0","0","1","0","1","0","1","0","0","1","0","1","0","0","1","0","1","0","1","0","0","1","0","1","0","0","1","0","1","0","1","0","0","1","0","1","0","0","1","0","1","0","1","0","0","1","0","1","0","0","1","0","1","0","1","0","0","1","0","1","0","0","1","0","1","0","1","0","0");
-        console.log(keyArray.length);
         $(function(){
             if (navigator.requestMIDIAccess) {
                 console.log('该浏览器支持 WebMIDI!');
             } else {
                 console.log('WebMIDI 不被该浏览器支持。');
             }
+            windowWidth = $(document).width();
+            console.log(windowWidth);
         });
 
         navigator.requestMIDIAccess().then(onMIDISuccess, onMIDIFailure);
