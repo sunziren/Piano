@@ -12,14 +12,9 @@ public class PianoController {
         return "/piano/index";
     }
 
-    @GetMapping("/home")
-    public String getHomePage(){
-        return "/piano/home";
-    }
-
-    @GetMapping("/piano")
-    public String getPianoPage(){
-        return "/piano/piano";
+    @GetMapping("/test")
+    public String getTestPage(){
+        return "/piano/test";
     }
 
 }
