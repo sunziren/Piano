@@ -212,13 +212,18 @@
             console.log(note);
         }
 
-        $(".key").mousedown(function(){
-            console.log(1);
+        // $(".key").onmouseover(function(){
+        //     $(this).css("background-color","gray");
+        // });
 
+        $(".key").mousedown(function(){
+            $(this).css("background-color","red");
         });
 
         $(".key").mouseup(function(){
-            console.log(2);
+            const id = $(this).attr('id').split("_")[1];
+            const keyColor = keyArray[id-1]==0?"white":"black";
+            $(this).css("background-color",keyColor);
         });
     </script>
 </html>
