@@ -5,128 +5,173 @@
     <title>Piano</title>
     <link rel="icon" href="./image/favicon.ico">
     <style type="text/css">
-        body{
+        html,body{
             background-color: #4E5465;
         }
-        .keyboard{
-            position:fixed;
-            display: flex;
-            height:25%;
-            width:100%;
-            bottom:0;
+        html, body, ul, li {
+            box-sizing: border-box;
         }
-        .key{
-
+        html, body, ul {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
         }
-        .white-key{
-            z-index: 10;
-            background-color: #ffffff;
-            border:1px solid black;
+        li {
+            list-style: none;
         }
-        .black-key{
-            z-index: 20;
-            height:70%;
-            /*position:absolute;*/
-            background-color: #000000;
+        .keyboard {
+            transition: background-color .1s ease 0s;
+        }
+        .keyboard:active {
+            background-color: #10871f;
+        }
+        .keyboard-white {
+            float: left;
+            width: calc(100% / 52);
+            height: 25%;
+            background-color: white;
+            border: 1px solid black;
+        }
+        .keyboard-black {
+            height: 18%;
+            position: absolute;
+            width: calc(100% / 60);
+            background-color: black;
+            border: 1px solid black;
             border-radius:0px 0px 10px 10px;
         }
+        .keyboard:nth-of-type(2) {left: 1%}
+        .keyboard:nth-of-type(5) {left: 4.9%}
+        .keyboard:nth-of-type(7) {left: 6.8%}
+        .keyboard:nth-of-type(10) {left: 10.7%}
+        .keyboard:nth-of-type(12) {left: 12.6%}
+        .keyboard:nth-of-type(14) {left: 14.5%}
+        .keyboard:nth-of-type(17) {left: 18.4%}
+        .keyboard:nth-of-type(19) {left: 20.3%}
+        .keyboard:nth-of-type(22) {left: 24.1%}
+        .keyboard:nth-of-type(24) {left: 26%}
+        .keyboard:nth-of-type(26) {left: 27.9%}
+        .keyboard:nth-of-type(29) {left: 31.9%}
+        .keyboard:nth-of-type(31) {left: 33.8%}
+        .keyboard:nth-of-type(34) {left: 37.6%}
+        .keyboard:nth-of-type(36) {left: 39.5%}
+        .keyboard:nth-of-type(38) {left: 41.4%}
+        .keyboard:nth-of-type(41) {left: 45.3%}
+        .keyboard:nth-of-type(43) {left: 47.2%}
+        .keyboard:nth-of-type(46) {left: 51.05%}
+        .keyboard:nth-of-type(48) {left: 52.95%}
+        .keyboard:nth-of-type(50) {left: 54.9%}
+        .keyboard:nth-of-type(53) {left: 58.7%}
+        .keyboard:nth-of-type(55) {left: 60.7%}
+        .keyboard:nth-of-type(58) {left: 64.5%}
+        .keyboard:nth-of-type(60) {left: 66.4%}
+        .keyboard:nth-of-type(62) {left: 68.35%}
+        .keyboard:nth-of-type(65) {left: 72.2%}
+        .keyboard:nth-of-type(67) {left: 74.1%}
+        .keyboard:nth-of-type(70) {left: 78%}
+        .keyboard:nth-of-type(72) {left: 79.9%}
+        .keyboard:nth-of-type(74) {left: 81.85%}
+        .keyboard:nth-of-type(77) {left: 85.75%}
+        .keyboard:nth-of-type(79) {left: 87.6%}
+        .keyboard:nth-of-type(82) {left: 91.5%}
+        .keyboard:nth-of-type(84) {left: 93.4%}
+        .keyboard:nth-of-type(86) {left: 95.3%}
     </style>
-    <link rel="stylesheet" href="./assets/js/layui/css/layui.css"  media="all">
 </head>
 <body>
-<div class="keyboard">
-    <div id="key_1"  class="key white-key"></div>
-    <div id="key_2"  class="key black-key"></div>
-    <div id="key_3"  class="key white-key"></div>
-    <div id="key_4"  class="key white-key"></div>
-    <div id="key_5"  class="key black-key"></div>
-    <div id="key_6"  class="key white-key"></div>
-    <div id="key_7"  class="key black-key"></div>
-    <div id="key_8"  class="key white-key"></div>
-    <div id="key_9"  class="key white-key"></div>
-    <div id="key_10" class="key black-key"></div>
-    <div id="key_11" class="key white-key"></div>
-    <div id="key_12" class="key black-key"></div>
-    <div id="key_13" class="key white-key"></div>
-    <div id="key_14" class="key black-key"></div>
-    <div id="key_15" class="key white-key"></div>
-    <div id="key_16" class="key white-key"></div>
-    <div id="key_17" class="key black-key"></div>
-    <div id="key_18" class="key white-key"></div>
-    <div id="key_19" class="key black-key"></div>
-    <div id="key_20" class="key white-key"></div>
-    <div id="key_21" class="key white-key"></div>
-    <div id="key_22" class="key black-key"></div>
-    <div id="key_23" class="key white-key"></div>
-    <div id="key_24" class="key black-key"></div>
-    <div id="key_25" class="key white-key"></div>
-    <div id="key_26" class="key black-key"></div>
-    <div id="key_27" class="key white-key"></div>
-    <div id="key_28" class="key white-key"></div>
-    <div id="key_29" class="key black-key"></div>
-    <div id="key_30" class="key white-key"></div>
-    <div id="key_31" class="key black-key"></div>
-    <div id="key_32" class="key white-key"></div>
-    <div id="key_33" class="key white-key"></div>
-    <div id="key_34" class="key black-key"></div>
-    <div id="key_35" class="key white-key"></div>
-    <div id="key_36" class="key black-key"></div>
-    <div id="key_37" class="key white-key"></div>
-    <div id="key_38" class="key black-key"></div>
-    <div id="key_39" class="key white-key"></div>
-    <div id="key_40" class="key white-key"></div>
-    <div id="key_41" class="key black-key"></div>
-    <div id="key_42" class="key white-key"></div>
-    <div id="key_43" class="key black-key"></div>
-    <div id="key_44" class="key white-key"></div>
-    <div id="key_45" class="key white-key"></div>
-    <div id="key_46" class="key black-key"></div>
-    <div id="key_47" class="key white-key"></div>
-    <div id="key_48" class="key black-key"></div>
-    <div id="key_49" class="key white-key"></div>
-    <div id="key_50" class="key black-key"></div>
-    <div id="key_51" class="key white-key"></div>
-    <div id="key_52" class="key white-key"></div>
-    <div id="key_53" class="key black-key"></div>
-    <div id="key_54" class="key white-key"></div>
-    <div id="key_55" class="key black-key"></div>
-    <div id="key_56" class="key white-key"></div>
-    <div id="key_57" class="key white-key"></div>
-    <div id="key_58" class="key black-key"></div>
-    <div id="key_59" class="key white-key"></div>
-    <div id="key_60" class="key black-key"></div>
-    <div id="key_61" class="key white-key"></div>
-    <div id="key_62" class="key black-key"></div>
-    <div id="key_63" class="key white-key"></div>
-    <div id="key_64" class="key white-key"></div>
-    <div id="key_65" class="key black-key"></div>
-    <div id="key_66" class="key white-key"></div>
-    <div id="key_67" class="key black-key"></div>
-    <div id="key_68" class="key white-key"></div>
-    <div id="key_69" class="key white-key"></div>
-    <div id="key_70" class="key black-key"></div>
-    <div id="key_71" class="key white-key"></div>
-    <div id="key_72" class="key black-key"></div>
-    <div id="key_73" class="key white-key"></div>
-    <div id="key_74" class="key black-key"></div>
-    <div id="key_75" class="key white-key"></div>
-    <div id="key_76" class="key white-key"></div>
-    <div id="key_77" class="key black-key"></div>
-    <div id="key_78" class="key white-key"></div>
-    <div id="key_79" class="key black-key"></div>
-    <div id="key_80" class="key white-key"></div>
-    <div id="key_81" class="key white-key"></div>
-    <div id="key_82" class="key black-key"></div>
-    <div id="key_83" class="key white-key"></div>
-    <div id="key_84" class="key black-key"></div>
-    <div id="key_85" class="key white-key"></div>
-    <div id="key_86" class="key black-key"></div>
-    <div id="key_87" class="key white-key"></div>
-    <div id="key_88" class="key white-key"></div>
-</div>
+<ul>
+    <li id="key_1" class="keyboard keyboard-white"></li>
+    <li id="key_2" class="keyboard keyboard-black"></li>
+    <li id="key_3" class="keyboard keyboard-white"></li>
+    <li id="key_4" class="keyboard keyboard-white"></li>
+    <li id="key_5" class="keyboard keyboard-black"></li>
+    <li id="key_6" class="keyboard keyboard-white"></li>
+    <li id="key_7" class="keyboard keyboard-black"></li>
+    <li id="key_8" class="keyboard keyboard-white"></li>
+    <li id="key_9" class="keyboard keyboard-white"></li>
+    <li id="key_10" class="keyboard keyboard-black"></li>
+    <li id="key_11" class="keyboard keyboard-white"></li>
+    <li id="key_12" class="keyboard keyboard-black"></li>
+    <li id="key_13" class="keyboard keyboard-white"></li>
+    <li id="key_14" class="keyboard keyboard-black"></li>
+    <li id="key_15" class="keyboard keyboard-white"></li>
+    <li id="key_16" class="keyboard keyboard-white"></li>
+    <li id="key_17" class="keyboard keyboard-black"></li>
+    <li id="key_18" class="keyboard keyboard-white"></li>
+    <li id="key_19" class="keyboard keyboard-black"></li>
+    <li id="key_20" class="keyboard keyboard-white"></li>
+    <li id="key_21" class="keyboard keyboard-white"></li>
+    <li id="key_22" class="keyboard keyboard-black"></li>
+    <li id="key_23" class="keyboard keyboard-white"></li>
+    <li id="key_24" class="keyboard keyboard-black"></li>
+    <li id="key_25"class="keyboard keyboard-white"></li>
+    <li id="key_26" class="keyboard keyboard-black"></li>
+    <li id="key_27" class="keyboard keyboard-white"></li>
+    <li id="key_28" class="keyboard keyboard-white"></li>
+    <li id="key_29" class="keyboard keyboard-black"></li>
+    <li id="key_30" class="keyboard keyboard-white"></li>
+    <li id="key_31" class="keyboard keyboard-black"></li>
+    <li id="key_32" class="keyboard keyboard-white"></li>
+    <li id="key_33" class="keyboard keyboard-white"></li>
+    <li id="key_34" class="keyboard keyboard-black"></li>
+    <li id="key_35" class="keyboard keyboard-white"></li>
+    <li id="key_36" class="keyboard keyboard-black"></li>
+    <li id="key_37" class="keyboard keyboard-white"></li>
+    <li id="key_38" class="keyboard keyboard-black"></li>
+    <li id="key_39" class="keyboard keyboard-white"></li>
+    <li id="key_40" class="keyboard keyboard-white"></li>
+    <li id="key_41" class="keyboard keyboard-black"></li>
+    <li id="key_42" class="keyboard keyboard-white"></li>
+    <li id="key_43" class="keyboard keyboard-black"></li>
+    <li id="key_44" class="keyboard keyboard-white"></li>
+    <li id="key_45" class="keyboard keyboard-white"></li>
+    <li id="key_46" class="keyboard keyboard-black"></li>
+    <li id="key_47" class="keyboard keyboard-white"></li>
+    <li id="key_48" class="keyboard keyboard-black"></li>
+    <li id="key_49" class="keyboard keyboard-white"></li>
+    <li id="key_50" class="keyboard keyboard-black"></li>
+    <li id="key_51" class="keyboard keyboard-white"></li>
+    <li id="key_52" class="keyboard keyboard-white"></li>
+    <li id="key_53" class="keyboard keyboard-black"></li>
+    <li id="key_54" class="keyboard keyboard-white"></li>
+    <li id="key_55" class="keyboard keyboard-black"></li>
+    <li id="key_56" class="keyboard keyboard-white"></li>
+    <li id="key_57" class="keyboard keyboard-white"></li>
+    <li id="key_58" class="keyboard keyboard-black"></li>
+    <li id="key_59" class="keyboard keyboard-white"></li>
+    <li id="key_60" class="keyboard keyboard-black"></li>
+    <li id="key_61" class="keyboard keyboard-white"></li>
+    <li id="key_62" class="keyboard keyboard-black"></li>
+    <li id="key_63" class="keyboard keyboard-white"></li>
+    <li id="key_64" class="keyboard keyboard-white"></li>
+    <li id="key_65" class="keyboard keyboard-black"></li>
+    <li id="key_66" class="keyboard keyboard-white"></li>
+    <li id="key_67" class="keyboard keyboard-black"></li>
+    <li id="key_68" class="keyboard keyboard-white"></li>
+    <li id="key_69" class="keyboard keyboard-white"></li>
+    <li id="key_70" class="keyboard keyboard-black"></li>
+    <li id="key_71" class="keyboard keyboard-white"></li>
+    <li id="key_72" class="keyboard keyboard-black"></li>
+    <li id="key_73" class="keyboard keyboard-white"></li>
+    <li id="key_74" class="keyboard keyboard-black"></li>
+    <li id="key_75" class="keyboard keyboard-white"></li>
+    <li id="key_76" class="keyboard keyboard-white"></li>
+    <li id="key_77" class="keyboard keyboard-black"></li>
+    <li id="key_78" class="keyboard keyboard-white"></li>
+    <li id="key_79" class="keyboard keyboard-black"></li>
+    <li id="key_80" class="keyboard keyboard-white"></li>
+    <li id="key_81" class="keyboard keyboard-white"></li>
+    <li id="key_82" class="keyboard keyboard-black"></li>
+    <li id="key_83" class="keyboard keyboard-white"></li>
+    <li id="key_84" class="keyboard keyboard-black"></li>
+    <li id="key_85" class="keyboard keyboard-white"></li>
+    <li id="key_86" class="keyboard keyboard-black"></li>
+    <li id="key_87" class="keyboard keyboard-white"></li>
+    <li id="key_88" class="keyboard keyboard-white"></li>
+</ul>
 </body>
 <script src="./assets/js/jquery/jquery-3.5.1.min.js"></script>
-<script src="./assets/js/layui/layui.js" charset="utf-8"></script>
 <script>
     var windowWidth = 0;
     //用来存放每个键位对应的琴键的颜色0-87个键，0代表白色，1代表黑色
@@ -192,13 +237,5 @@
         $("#key_"+(keyNum+1)).css("background-color",keyColor);
         console.log(note);
     }
-
-    $(".key").mousedown(function(){
-        console.log(1);
-    });
-
-    $(".key").mouseup(function(){
-        console.log(2);
-    });
 </script>
 </html>

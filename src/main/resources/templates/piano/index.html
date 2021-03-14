@@ -51,6 +51,9 @@
                 display: block;
                 clear: both;
             }
+            .key:active {
+                background-color: #ff9308;
+            }
         </style>
         <link rel="stylesheet" href="./assets/js/layui/css/layui.css"  media="all">
     </head>
@@ -211,19 +214,5 @@
             $("#key_"+(keyNum+1)).css("background-color",keyColor);
             console.log(note);
         }
-
-        // $(".key").onmouseover(function(){
-        //     $(this).css("background-color","gray");
-        // });
-
-        $(".key").mousedown(function(){
-            $(this).css("background-color","red");
-        });
-
-        $(".key").mouseup(function(){
-            const id = $(this).attr('id').split("_")[1];
-            const keyColor = keyArray[id-1]==0?"white":"black";
-            $(this).css("background-color",keyColor);
-        });
     </script>
 </html>
